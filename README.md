@@ -47,5 +47,5 @@ Esta aplicação oferece uma estrutura robusta para controle de usuários, auten
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/Aneurysm10/FastAPI-pedidos.git)
-   cd SEU_REPOSITORIO
+   git clone [https://github.com/Aneurysm10/FastAPI-pedidos.git](https://github.com/Aneurysm10/FastAPI-pedidos.git)
+   cd FastAPI-pedidos
