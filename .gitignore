@@ -5,3 +5,5 @@ database/
 venv/
 .venv/
 .vscode/
+.env
+*.env
