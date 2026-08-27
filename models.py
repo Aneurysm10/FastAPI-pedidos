@@ -1,10 +1,16 @@
+import os
+from dotenv import load_dotenv
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from sqlalchemy import String, Integer, Boolean, Float, ForeignKey
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
-# Engine assíncrono
-DATABASE_URL = "sqlite+aiosqlite:///database/banco.db"
+# Carrega as variáveis do arquivo .env
+load_dotenv()
 
+# Obtém a URL do .env com um valor padrão de segurança caso a variável não exista
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///database/banco.db")
+
+# Engine assíncrono
 db = create_async_engine(
     DATABASE_URL,
     echo=True,
@@ -43,9 +49,6 @@ class Pedido(Base):
     itens: Mapped[list["ItemPedido"]] = relationship(back_populates="pedido", cascade="all, delete-orphan")
 
     def calcular_preco(self):
-        # percorrer todos os itens do pedido
-        # somar todos os preços de todos os itens dos pedidos
-        # editar no campo "preço" o valor final do preço do pedido
         self.preco = sum(item.preco_unitario * item.quantidade for item in self.itens)
 
 
