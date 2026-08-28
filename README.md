@@ -253,18 +253,13 @@ curl -H "Authorization: Bearer SEU_TOKEN" http://127.0.0.1:8000/pedidos/
 
 ```text
 FastAPI-pedidos/
-│
 ├── alembic/
 │   ├── versions/
 │   └── env.py
-│
 ├── database/
 │   └── banco.db
-│
-├── routers/
-│   ├── auth.py
-│   └── order.py
-│
+├── auth_router.py
+├── order_router.py
 ├── models.py
 ├── schemas.py
 ├── dependencies.py
@@ -275,6 +270,7 @@ FastAPI-pedidos/
 ├── .env
 ├── .gitignore
 └── README.md
+
 ```
 
 ---
