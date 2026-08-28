@@ -19,9 +19,9 @@ Uma API RESTful assíncrona para gerenciamento de pedidos e usuários desenvolvi
 Esta aplicação oferece uma estrutura robusta para controle de usuários, autenticação via tokens JWT e gerenciamento de pedidos com cálculo automático de preços e múltiplos itens por pedido.
 
 ### 🌟 Funcionalidades Principais
-- **Autenticação Segura:** Cadastro e login de usuários com geração de token JWT.
-- **Operações Assíncronas:** Utilização do `SQLAlchemy` assíncrono com driver `aiosqlite`.
-- **Cálculo Automático:** Atualização dinâmica do valor total dos pedidos com base nos itens cadastrados.
+- **Autenticação Segura:** cadastro e login de usuários com geração de token JWT.
+- **Operações Assíncronas:** utilização do `SQLAlchemy` assíncrono com driver `aiosqlite`.
+- **Cálculo Automático:** atualização dinâmica do valor total dos pedidos com base nos itens cadastrados.
 - **Documentação Automática:** Swagger UI e ReDoc nativos e acessíveis no navegador.
 
 ---
@@ -40,43 +40,42 @@ Esta aplicação oferece uma estrutura robusta para controle de usuários, auten
 ## ⚙️ Como Executar o Projeto Localmente
 
 ### Pré-requisitos
-- Python 3.10 ou superior instalado.
+- Python 3.11 ou superior instalado.
 - Git instalado na máquina.
 
-### Passo a Passo
+### Passo a passo
 
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/Aneurysm10/FastAPI-pedidos.git
-   cd FastAPI-pedidos
-   
- 2. **Crie um ambiente virtual:**
-   ```bash
-   python -m venv venv
+**1. Clone o repositório:**
+```bash
+git clone https://github.com/Aneurysm10/FastAPI-pedidos.git
+cd FastAPI-pedidos
+```
 
-3. **Ative o ambiente virtual:**
+**2. Crie um ambiente virtual:**
+```bash
+python -m venv venv
+```
 
-   ### Windows
+**3. Ative o ambiente virtual:**
 
-   ```bash
-   venv\Scripts\activate
+Windows:
+```bash
+venv\Scripts\activate
+```
 
-### Linux / macOS
-
+Linux / macOS:
 ```bash
 source venv/bin/activate
 ```
 
-4. **Instale as dependências:**
-
+**4. Instale as dependências:**
 ```bash
 pip install -r requirements.txt
 ```
 
-5. **Configure as variáveis de ambiente:**
+**5. Configure as variáveis de ambiente:**
 
 Crie um arquivo `.env` na raiz do projeto:
-
 ```env
 SECRET_KEY=sua_chave_secreta
 ALGORITHM=HS256
@@ -84,20 +83,17 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 DATABASE_URL=sqlite+aiosqlite:///database/banco.db
 ```
 
-6. **Execute as migrations:**
-
+**6. Execute as migrations:**
 ```bash
 alembic upgrade head
 ```
 
-7. **Inicie o servidor:**
-
+**7. Inicie o servidor:**
 ```bash
 uvicorn main:app --reload
 ```
 
 A API estará disponível em:
-
 ```text
 http://127.0.0.1:8000
 ```
@@ -108,17 +104,8 @@ http://127.0.0.1:8000
 
 O FastAPI fornece documentação automática através do Swagger UI e ReDoc.
 
-### Swagger UI
-
-```text
-http://127.0.0.1:8000/docs
-```
-
-### ReDoc
-
-```text
-http://127.0.0.1:8000/redoc
-```
+- **Swagger UI:** http://127.0.0.1:8000/docs
+- **ReDoc:** http://127.0.0.1:8000/redoc
 
 ---
 
@@ -141,7 +128,6 @@ Endpoint protegido
 ```
 
 Após realizar o login, o token deve ser enviado através do header:
-
 ```http
 Authorization: Bearer SEU_TOKEN
 ```
@@ -153,7 +139,6 @@ Authorization: Bearer SEU_TOKEN
 O sistema possui funcionalidades para gerenciamento e autenticação de usuários.
 
 Principais operações:
-
 - Cadastro de usuários
 - Login
 - Geração de token JWT
@@ -167,9 +152,7 @@ As senhas são armazenadas utilizando hash, evitando o armazenamento de credenci
 
 ## 📦 Pedidos
 
-Um pedido pode possuir múltiplos itens.
-
-Exemplo:
+Um pedido pode possuir múltiplos itens:
 
 ```text
 Pedido
@@ -179,12 +162,9 @@ Pedido
 └── Item 3
 ```
 
-Cada item possui informações relacionadas ao produto, quantidade e preço.
-
-O valor total do pedido é calculado automaticamente com base nos itens associados.
+Cada item possui informações relacionadas ao produto, quantidade e preço. O valor total do pedido é calculado automaticamente com base nos itens associados.
 
 Exemplo:
-
 ```text
 Produto A
 Quantidade: 2
@@ -205,7 +185,6 @@ Total: R$ 45,00
 O projeto utiliza **SQLite** como banco de dados e **SQLAlchemy** como ORM.
 
 A comunicação com o banco é realizada de forma assíncrona utilizando:
-
 - `AsyncSession`
 - `aiosqlite`
 
@@ -215,20 +194,17 @@ As alterações na estrutura do banco são controladas através do **Alembic**.
 
 ## 🔄 Migrations
 
-Para criar uma nova migration automaticamente:
-
+Criar uma nova migration automaticamente:
 ```bash
 alembic revision --autogenerate -m "descricao_da_mudanca"
 ```
 
-Para aplicar as migrations:
-
+Aplicar as migrations:
 ```bash
 alembic upgrade head
 ```
 
-Para voltar uma migration:
-
+Voltar uma migration:
 ```bash
 alembic downgrade -1
 ```
@@ -249,7 +225,6 @@ alembic downgrade -1
 ## 🧪 Testando a API
 
 Depois de iniciar o servidor, acesse o Swagger:
-
 ```text
 http://127.0.0.1:8000/docs
 ```
@@ -257,20 +232,17 @@ http://127.0.0.1:8000/docs
 Através dele é possível visualizar e testar os endpoints diretamente pelo navegador.
 
 Também é possível utilizar ferramentas como:
-
 - Postman
 - Insomnia
 - Bruno
 - cURL
 
 Exemplo:
-
 ```bash
 curl http://127.0.0.1:8000/pedidos/
 ```
 
 Para endpoints protegidos:
-
 ```bash
 curl -H "Authorization: Bearer SEU_TOKEN" http://127.0.0.1:8000/pedidos/
 ```
@@ -310,7 +282,6 @@ FastAPI-pedidos/
 ## 🎯 Objetivos de Aprendizado
 
 Este projeto foi desenvolvido para praticar conceitos importantes de desenvolvimento backend com Python:
-
 - Desenvolvimento de APIs REST
 - FastAPI
 - Programação assíncrona
@@ -329,9 +300,7 @@ Este projeto foi desenvolvido para praticar conceitos importantes de desenvolvim
 
 ## 📖 Aprendizados
 
-Durante o desenvolvimento deste projeto, foram explorados conceitos fundamentais para a construção de aplicações backend modernas com Python.
-
-O projeto permitiu colocar em prática a criação de uma API REST, comunicação assíncrona com banco de dados, autenticação utilizando JWT, validação de dados, relacionamento entre entidades e gerenciamento de migrations com Alembic.
+Durante o desenvolvimento deste projeto, foram explorados conceitos fundamentais para a construção de aplicações backend modernas com Python. O projeto permitiu colocar em prática a criação de uma API REST, comunicação assíncrona com banco de dados, autenticação utilizando JWT, validação de dados, relacionamento entre entidades e gerenciamento de migrations com Alembic.
 
 ---
 
@@ -340,7 +309,6 @@ O projeto permitiu colocar em prática a criação de uma API REST, comunicaçã
 Desenvolvido por **Aneurysm10**.
 
 ### 🔗 Links
-
 - GitHub: https://github.com/Aneurysm10
 - Repositório: https://github.com/Aneurysm10/FastAPI-pedidos
 
