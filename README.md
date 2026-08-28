@@ -258,8 +258,8 @@ FastAPI-pedidos/
 │   └── env.py
 ├── database/
 │   └── banco.db
-├── auth_router.py
-├── order_router.py
+├── auth_routes.py
+├── order_routes.py
 ├── models.py
 ├── schemas.py
 ├── dependencies.py
