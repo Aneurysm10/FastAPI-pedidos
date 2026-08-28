@@ -49,7 +49,7 @@ Esta aplicação oferece uma estrutura robusta para controle de usuários, auten
    ```bash
    git clone https://github.com/Aneurysm10/FastAPI-pedidos.git
    cd FastAPI-pedidos
-   ```
+   
    2. **Crie um ambiente virtual:**
 
 ```bash
