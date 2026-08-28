@@ -50,11 +50,9 @@ Esta aplicação oferece uma estrutura robusta para controle de usuários, auten
    git clone https://github.com/Aneurysm10/FastAPI-pedidos.git
    cd FastAPI-pedidos
    
-   2. **Crie um ambiente virtual:**
-
-```bash
-python -m venv venv
-```
+ 2. **Crie um ambiente virtual:**
+   ```bash
+   python -m venv venv
 
 3. **Ative o ambiente virtual:**
 
