@@ -330,22 +330,6 @@ Este projeto foi desenvolvido para praticar conceitos importantes de desenvolvim
 
 ---
 
-## 🚀 Melhorias Futuras
-
-- [ ] Testes automatizados com Pytest
-- [ ] Paginação dos pedidos
-- [ ] Sistema de permissões por usuário
-- [ ] Refresh Token
-- [ ] Docker
-- [ ] PostgreSQL
-- [ ] Redis para cache
-- [ ] Logging estruturado
-- [ ] Tratamento global de exceções
-- [ ] CI/CD com GitHub Actions
-- [ ] Deploy em ambiente cloud
-
----
-
 ## 📖 Aprendizados
 
 Durante o desenvolvimento deste projeto, foram explorados conceitos fundamentais para a construção de aplicações backend modernas com Python.
