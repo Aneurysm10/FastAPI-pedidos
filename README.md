@@ -56,11 +56,10 @@ Esta aplicação oferece uma estrutura robusta para controle de usuários, auten
 
 3. **Ative o ambiente virtual:**
 
-### Windows
+   ### Windows
 
-```bash
-venv\Scripts\activate
-```
+   ```bash
+   venv\Scripts\activate
 
 ### Linux / macOS
 
