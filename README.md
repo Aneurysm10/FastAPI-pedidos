@@ -263,7 +263,7 @@ FastAPI-pedidos/
 │
 ├── routers/
 │   ├── auth.py
-│   └── pedidos.py
+│   └── order.py
 │
 ├── models.py
 ├── schemas.py
