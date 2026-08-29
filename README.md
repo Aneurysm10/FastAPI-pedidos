@@ -251,6 +251,7 @@ curl -H "Authorization: Bearer SEU_TOKEN" http://127.0.0.1:8000/pedidos/
 
 ## 🏗️ Estrutura do Projeto
 
+```text
 FastAPI-pedidos/
 ├── alembic/
 │   ├── versions/
@@ -271,7 +272,6 @@ FastAPI-pedidos/
 ├── .env
 ├── .gitignore
 └── README.md
-
 ```
 
 ---
