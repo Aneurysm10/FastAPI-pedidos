@@ -251,7 +251,6 @@ curl -H "Authorization: Bearer SEU_TOKEN" http://127.0.0.1:8000/pedidos/
 
 ## 🏗️ Estrutura do Projeto
 
-```text
 FastAPI-pedidos/
 ├── alembic/
 │   ├── versions/
@@ -263,6 +262,8 @@ FastAPI-pedidos/
 ├── models.py
 ├── schemas.py
 ├── dependencies.py
+├── oauth2.py
+├── security.py
 ├── config.py
 ├── main.py
 ├── alembic.ini
