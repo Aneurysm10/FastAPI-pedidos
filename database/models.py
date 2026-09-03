@@ -7,8 +7,8 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 # Carrega as variáveis do arquivo .env
 load_dotenv()
 
-# Obtém a URL do .env com um valor padrão de segurança caso a variável não exista
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///database/banco.db")
+# Obtém a URL do .env
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 # Engine assíncrono
 db = create_async_engine(
