@@ -256,16 +256,18 @@ FastAPI-pedidos/
 ├── alembic/
 │   ├── versions/
 │   └── env.py
+├── core/
+│   ├── config.py
+│   ├── security.py
+│   └── oauth2.py
 ├── database/
+│   ├── models.py
 │   └── banco.db
-├── auth_routes.py
-├── order_routes.py
-├── models.py
+├── routers/
+│   ├── auth_routes.py
+│   └── order_routes.py
 ├── schemas.py
 ├── dependencies.py
-├── oauth2.py
-├── security.py
-├── config.py
 ├── main.py
 ├── alembic.ini
 ├── requirements.txt
@@ -316,3 +318,4 @@ Desenvolvido por **Aneurysm10**.
 ⭐ Se este projeto foi útil para você, considere deixar uma estrela no repositório!
 
 </div>
+
