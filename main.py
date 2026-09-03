@@ -1,7 +1,7 @@
-from auth_routes import auth_router
+from routers.auth_routes import auth_router
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
-from order_routes import order_router
+from routers.order_routes import order_router
 
 app = FastAPI(title="API de Gerenciamento de Pedidos")
 

@@ -6,11 +6,11 @@ from jose import jwt
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from config import SECRET_KEY, ACCESS_TOKEN_EXPIRE_MINUTES, ALGORITHM
+from core.config import SECRET_KEY, ACCESS_TOKEN_EXPIRE_MINUTES, ALGORITHM
 from dependencies import pegar_sessao, verificar_token
-from models import Usuario
+from database.models import Usuario
 from schemas import UsuarioSchema, LoginSchema
-from security import bcrypt_context
+from core.security import bcrypt_context
 
 
 auth_router = APIRouter(

@@ -4,7 +4,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from dependencies import pegar_sessao, verificar_token
-from models import ItemPedido, Pedido, Usuario
+from database.models import ItemPedido, Pedido, Usuario
 from schemas import ItemPedidoSchema, PedidoSchema, ResponsePedidoSchema
 
 order_router = APIRouter(
