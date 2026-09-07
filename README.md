@@ -319,7 +319,7 @@ Desenvolvido por **Aneurysm10**.
 ⭐ Se este projeto foi útil para você, considere deixar uma estrela no repositório!
 
 </div>
-=======
+
 <div align="center">
 
 # 🚀 API de Gerenciamento de Pedidos
