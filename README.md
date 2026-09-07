@@ -257,24 +257,26 @@ FastAPI-pedidos/
 ├── alembic/
 │   ├── versions/
 │   └── env.py
-├── core/
-│   ├── config.py
-│   ├── security.py
-│   └── oauth2.py
-├── database/
-│   ├── models.py
-│   └── banco.db
-├── routers/
-│   ├── auth_routes.py
-│   └── order_routes.py
-├── schemas.py
-├── dependencies.py
-├── main.py
-├── alembic.ini
-├── requirements.txt
+├── app/
+│   ├── core/
+│   │   ├── config.py
+│   │   ├── oauth2.py
+│   │   └── security.py
+│   ├── database/
+│   │   ├── models.py
+│   │   └── banco.db
+│   ├── routers/
+│   │   ├── auth_routes.py
+│   │   └── order_routes.py
+│   ├── dependencies.py
+│   ├── main.py
+│   └── schemas.py
+├── venv/
 ├── .env
 ├── .gitignore
-└── README.md
+├── alembic.ini
+├── README.md
+└── requirements.txt
 ```
 
 ---
