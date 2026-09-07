@@ -3,10 +3,10 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from jose import jwt, JWTError
 
-from models import Usuario
-from models import SessionLocal  # async_sessionmaker
-from config import SECRET_KEY, ALGORITHM
-from oauth2 import oauth2_schema
+from app.database.models import Usuario
+from app.database.models import SessionLocal  # async_sessionmaker
+from app.core.config import SECRET_KEY, ALGORITHM
+from app.core.oauth2 import oauth2_schema
 
 
 async def pegar_sessao():

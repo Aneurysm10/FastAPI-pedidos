@@ -3,9 +3,9 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from dependencies import pegar_sessao, verificar_token
-from database.models import ItemPedido, Pedido, Usuario
-from schemas import ItemPedidoSchema, PedidoSchema, ResponsePedidoSchema
+from app.dependencies import pegar_sessao, verificar_token
+from app.database.models import ItemPedido, Pedido, Usuario
+from app.schemas import ItemPedidoSchema, PedidoSchema, ResponsePedidoSchema
 
 order_router = APIRouter(
     prefix="/pedidos",
