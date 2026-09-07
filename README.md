@@ -91,7 +91,7 @@ alembic upgrade head
 
 **7. Inicie o servidor:**
 ```bash
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
 
 A API estará disponível em:
