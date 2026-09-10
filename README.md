@@ -271,7 +271,6 @@ FastAPI-pedidos/
 │   ├── dependencies.py
 │   ├── main.py
 │   └── schemas.py
-├── venv/
 ├── .env
 ├── .gitignore
 ├── alembic.ini
